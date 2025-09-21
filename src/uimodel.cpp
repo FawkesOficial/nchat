@@ -785,6 +785,9 @@ void UiModel::Impl::ResetMessageOffset()
 void UiModel::Impl::MarkRead(const std::string& p_ProfileId, const std::string& p_ChatId, const std::string& p_MsgId,
                              bool p_WasUnread)
 {
+  // pretty much make sure this never runs :)
+  return;
+
   const bool markReadEveryView = HasProtocolFeature(p_ProfileId, FeatureMarkReadEveryView);
   if (!markReadEveryView && !p_WasUnread) return;
 
